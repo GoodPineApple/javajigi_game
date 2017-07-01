@@ -3,6 +3,7 @@ package lotto;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -15,8 +16,17 @@ public class Solution {
 
         int input = scan.nextInt();
         int Tickets = calTickets(input);
+
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5);
+        numbers.contains(3);
+
+
+        // lotto를 한번에 하나씩 생성하고 lotto는 메인에서 관리하기.
+        for (int i = 0; i < Tickets ; i++) {
+            int[]
+        }
         ArrayList lottos = genLottos(Tickets);
-    
+
         System.out.println();
         System.out.println("지난주 당첨번호를 입력해주세요.");
         String correct = scan.next();
@@ -26,6 +36,8 @@ public class Solution {
         for (int i = 0; i < winNumStr.length ; i++) {
             winNum[i] = Integer.parseInt(winNumStr[i]);
         }
+
+
 
         int[] result = calCorrects(lottos, winNum);
 
@@ -39,31 +51,5 @@ public class Solution {
         return TicketNums;
     }
 
-    // 티켓 갯수에 따라 로또 생성
-    public static ArrayList genLottos(int Tickets){
-        ArrayList result = new ArrayList();
-        for (int i = 0; i < Tickets ; i++) {
-            result.add(genRandomArray());
-        }
-        return result;
-    }
 
-    // 6개 숫자로 구성된 하나의 로또 생성
-    public static int[] genRandomArray(){
-        int[] result = new int[6];
-        for (int i = 0; i < result.length ; i++) {
-            double randomvalue = Math.random();
-            int random = (int)(randomvalue*45)+1;
-            result[i] = random;
-        }
-        System.out.println(Arrays.toString(result));
-        return  result;
-    }
-
-    public static int[] calCorrects(ArrayList lottos, int[] winNum){
-        int[] result = new int[4];
-        int three, four, five, six;
-        System.out.println(lottos.get(0));
-        return result;
-    }
 }
