@@ -24,7 +24,7 @@ public class Solution {
         // lotto를 한번에 하나씩 생성하고 lotto는 메인에서 관리하기.
         for (int i = 0; i < Tickets ; i++) {
         }
-        ArrayList lottos = genLottos(Tickets);
+//        ArrayList lottos = genLottos(Tickets);
 
         System.out.println();
         System.out.println("지난주 당첨번호를 입력해주세요.");
@@ -38,7 +38,7 @@ public class Solution {
 
 
 
-        int[] result = calCorrects(lottos, winNum);
+//        int[] result = calCorrects(lottos, winNum);
 
         System.out.println();
         System.out.println("당첨 통계");
