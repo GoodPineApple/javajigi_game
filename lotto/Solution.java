@@ -23,7 +23,6 @@ public class Solution {
 
         // lotto를 한번에 하나씩 생성하고 lotto는 메인에서 관리하기.
         for (int i = 0; i < Tickets ; i++) {
-            int[]
         }
         ArrayList lottos = genLottos(Tickets);
 
